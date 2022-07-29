@@ -1,0 +1,91 @@
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+	font-size: 30px;
+	font-family: Georgia serif;
+	text-align: center;
+	color: rgb(0, 0, 0);
+}
+
+p {
+	padding: 15px 5px 0px 5px;
+	font-family: Georgia sans-serif;
+	font-size: 20px;
+}
+
+.module2-solution{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10px;
+  margin: 10px;
+  max-width:100%;
+}
+
+
+.module2-solution .section { 
+	background-color: rgb(150, 150, 150);
+   	border: 2px solid black;
+   	margin-top: 20px; 
+   	margin-right: 20px; 
+   	padding: 3px;
+   	text-align: justify;
+   	position: relative;
+ }
+
+.module2-solution .section span {
+	font-size: 20px;
+	width: 150px;
+	border: 1px solid black;
+	font-weight: bold;
+	text-align: center;
+	float: right; top :0; right: 0; margin: 0;
+	position: absolute;
+}
+
+#span1 {
+	background-color: rgb(253, 158, 158);
+	color:black;
+}
+#span2 {
+	background-color: rgb(255, 3, 3);
+	color: white;
+}
+#span3 {
+	background-color: rgb(196, 196, 93);
+	color: black;
+}
+
+
+         /* Media Query*/
+
+
+/* Desktop view */
+
+@media (min-width: 992px) {
+.module2-solution{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10px
+}
+}
+
+/* Tablet PC view */
+
+@media (min-width: 768px) and (max-width: 991px) {
+.module2-solution > .section:last-child{
+      grid-column: 1 / span 2;
+}
+}
+/* Mobile view */
+
+@media (max-width: 767px)  {
+  
+.module2-solution{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  gap: 10px
+}
+}
